@@ -7,8 +7,8 @@ app.use(express.json());
 const Rollbar = require("rollbar");
 const rollbar = new Rollbar({
   accessToken: '67e626ef345e449b86111f5058cf843d',
-  captureUncaught: false,
-  captureUnhandledRejections: false
+  captureUncaught: true,
+  captureUnhandledRejections: true
 });
 
 rollbar.log('Brendan is Awesome!');

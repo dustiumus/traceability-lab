@@ -18,7 +18,7 @@ app.get('/', function(req, res){
 });
 
 app.get('/', function(req, res){
-    getAwesome();
+    rollbar.log(getAwesome());
 });
 
 const port = process.env.PORT || 4500;

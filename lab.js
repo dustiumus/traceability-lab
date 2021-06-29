@@ -18,7 +18,8 @@ app.get('/', function(req, res){
 });
 
 app.get('/', function(req, res){
-    rollbar.log(getAwesome());
+    rollbar.log(getAwesome())
+    rollbar.log("Error: Brendan E is awesome");
 });
 
 const port = process.env.PORT || 4500;

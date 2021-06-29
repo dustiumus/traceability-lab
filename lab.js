@@ -18,7 +18,7 @@ app.get('/', function(req, res){
 });
 
 app.get('/getAwesome', function(getAwesome){
-    rollbar.log("error", '/getAwesome is Unavailable');
+    rollbar.error('/getAwesome is Unavailable');
 });
 
 // try {

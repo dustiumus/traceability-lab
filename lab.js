@@ -4,6 +4,15 @@ const path = require('path');
 
 app.use(express.json());
 
+const Rollbar = require("rollbar");
+const rollbar = new Rollbar({
+  accessToken: '67e626ef345e449b86111f5058cf843d',
+  captureUncaught: true,
+  captureUnhandledRejections: true
+});
+
+rollbar.log('Brendan is Awesome!');
+
 app.get('/', function(req, res){
     res.sendFile(path.join(__dirname, '/public/lab.html'));
 });

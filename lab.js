@@ -21,13 +21,17 @@ app.get('/getAwesome', function(getAwesome){
     rollbar.error('/getAwesome is Unavailable');
 });
 
-// try {
-//     nonExistentFunction();
-//   } catch (error) {
-//     console.error(error);
-//     }
+app.get('/rollbarSucks', function(rollbarSucks){
+    rollbar.critical('rollbarSucks is Unavailable');
+});
 
-// document.getElementById(nonExistentFunction).addEventListener(click());
+app.get('/devOpsBlows', function(devOpsBlows){
+    rollbar.warning('DevOps is not very fun');
+});
+
+app.get('/rollbarCritical', function(rollbarCritical){
+    rollbar.critical('Rollbar is low on my list');
+});
 
 const port = process.env.PORT || 4500;
 app.listen(port, function(){console.log(`Port is chillin on ${port}`)});

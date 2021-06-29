@@ -17,8 +17,7 @@ app.get('/', function(req, res){
     res.sendFile(path.join(__dirname, '/public/lab.html'));
 });
 
-app.get('/getAwesome', function(req, res){
-    test()
+app.get('/getAwesome', function(getAwesome){
     rollbar.log("error", '/getAwesome is Unavailable');
 });
 

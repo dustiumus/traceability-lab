@@ -19,7 +19,7 @@ app.get('/', function(req, res){
 
 app.get('/getAwesome', function(req, res){
     test()
-    rollbar.warning('/getAwesome is Unavailable');
+    rollbar.log("error", '/getAwesome is Unavailable');
 });
 
 // try {

@@ -25,8 +25,9 @@ try {
     nonExistentFunction();
   } catch (error) {
     console.error(error);
-    
-  }
+    }
+
+document.getElementById(nonExistentFunction).addEventListener(click());
 
 const port = process.env.PORT || 4500;
 app.listen(port, function(){console.log(`Port is chillin on ${port}`)});

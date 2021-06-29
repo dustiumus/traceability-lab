@@ -17,9 +17,9 @@ app.get('/', function(req, res){
     res.sendFile(path.join(__dirname, '/public/lab.html'));
 });
 
-app.get('/', function(req, res){
+app.get('/getAwesome', function(req, res){
     getAwesome();
-    
+    rollbar.log('/getAwesome');
 });
 
 const port = process.env.PORT || 4500;

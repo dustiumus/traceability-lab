@@ -21,7 +21,12 @@ app.get('/getAwesome', function(req, res){
     test()
 });
 
-rollbar.log('/getAwesome');
+try {
+    nonExistentFunction();
+  } catch (error) {
+    console.error(error);
+    
+  }
 
 const port = process.env.PORT || 4500;
 app.listen(port, function(){console.log(`Port is chillin on ${port}`)});
